@@ -1,5 +1,3 @@
-# $Rev: 3421 $, $Date: 2005-08-27 17:42:47 $
-#
 Summary:	xsetroot application
 Summary(pl):	Aplikacja xsetroot
 Name:		xorg-app-xsetroot
@@ -17,10 +15,7 @@ BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-util-util-macros
 BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-data-xbitmaps
-BuildRoot:	%{tmpdir}/xsetroot-%{version}-root-%(id -u -n)
-
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 xsetroot application.
@@ -28,11 +23,9 @@ xsetroot application.
 %description -l pl
 Aplikacja xsetroot.
 
-
 %prep
 %setup -q -n xsetroot-%{version}
 %patch0 -p1
-
 
 %build
 %{__aclocal}
@@ -43,17 +36,14 @@ Aplikacja xsetroot.
 
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
-
 
 %files
 %defattr(644,root,root,755)
