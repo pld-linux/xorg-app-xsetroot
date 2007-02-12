@@ -1,5 +1,5 @@
 Summary:	xsetroot application
-Summary(pl.UTF-8):   Aplikacja xsetroot
+Summary(pl.UTF-8):	Aplikacja xsetroot
 Name:		xorg-app-xsetroot
 Version:	1.0.1
 Release:	1
