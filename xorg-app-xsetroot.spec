@@ -1,5 +1,5 @@
-Summary:	xsetroot application
-Summary(pl.UTF-8):	Aplikacja xsetroot
+Summary:	xsetroot application - root window parameter setting utility for X
+Summary(pl.UTF-8):	Aplikacja xsetroot - narzędzie do zmiany parametrów głównego okna X
 Name:		xorg-app-xsetroot
 Version:	1.0.2
 Release:	1
@@ -14,14 +14,21 @@ BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-data-xbitmaps
 # just xmuu
 BuildRequires:	xorg-lib-libXmu-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.2
+BuildRequires:	xorg-util-util-macros >= 1.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-xsetroot application.
+The xsetroot program allows you to tailor the appearance of the
+background ("root") window on a workstation display running X.
+Normally, you experiment with xsetroot until you find a personalized
+look that you like, then put the xsetroot command that produces it
+into your X startup file.
 
 %description -l pl.UTF-8
-Aplikacja xsetroot.
+Program xsetroot pozwala dostroić wygląd tła (głównego okna) ekranu z
+działającym X. Zwykle eksperymentuje się z xsetroot do osiągnięcia
+lubianego, spersonalizowanego wyglądu, a następnie umieszcza tworzące
+go polecenie xsetroot w pliku startowym X.
 
 %prep
 %setup -q -n xsetroot-%{version}
