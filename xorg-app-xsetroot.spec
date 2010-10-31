@@ -1,20 +1,20 @@
 Summary:	xsetroot application - root window parameter setting utility for X
 Summary(pl.UTF-8):	Aplikacja xsetroot - narzędzie do zmiany parametrów głównego okna X
 Name:		xorg-app-xsetroot
-Version:	1.0.3
+Version:	1.1.0
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xsetroot-%{version}.tar.bz2
-# Source0-md5:	cbda9b9b8da5af4614110883d5a276b8
+# Source0-md5:	b78a2da4cf128775031a5a3422fc0b78
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-data-xbitmaps
 # just xmuu
 BuildRequires:	xorg-lib-libXmu-devel
-BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
